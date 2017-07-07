@@ -1,0 +1,25 @@
+<button ui-sref="question2">start</button>
+<ul>
+    <li>{{questions[0].question}}</li>
+    <!--<li>{{questions[0].answerChoice1}}</li>
+    <li>{{questions[0].answerChoice2}}</li>
+    <li>{{questions[0].answerChoice3}}</li>
+    <li>{{questions[0].answerChoice4}}</li>-->
+    <br>
+     
+    <button ng-click="myFunc()">{{questions[0].answerChoice1}}</button>
+    <button ng-click="myFunc()">{{questions[0].answerChoice2}}</button>
+    <button ng-click="myFunc()">{{questions[0].answerChoice3}}</button>
+    <button ng-click="myFunc()">{{questions[0].answerChoice4}}</button>
+
+</ul>
+
+
+<div ng-show="showMe">
+    <ul>
+        <li></li>
+        <li>pizza</li>
+        <li>pasta</li>
+        <li>chicken</li>
+    </ul>
+</div>
