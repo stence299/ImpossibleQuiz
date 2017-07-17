@@ -1,0 +1,22 @@
+*
+{
+    margin: 0px;
+}
+.question-title
+{
+    text-align: center;
+    margin-top: 10%;
+}
+.body-text
+{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 32px;
+    font-family: 'Schoolbell';
+}
+.home-arrow
+{   
+    margin-top: 15%;
+    cursor: pointer;
+    width: 75px;
+}

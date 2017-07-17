@@ -4,47 +4,12 @@ angular.module("quizApp", ["ui.router"])
     $stateProvider
     .state("home",{
         url: "/",
-        templateUrl: "./views/home/home.html"
+        templateUrl: "./views/home/home.html",
     })
-    .state("question1",{
-        url: "/question1",
-        templateUrl: "./views/questions/question1/question1.html"
-    })
-    .state("question2",{
-        url: "/question2",
-        templateUrl: "./views/questions/question2/question2.html"
-    })
-    .state("question3",{
-        url: "/question3",
-        templateUrl: "./views/questions/question3/question3.html"
-    })
-    .state("question4",{
-        url: "/question4",
-        templateUrl: "./views/questions/question4/question4.html"
-    })
-    .state("question5",{
-        url: "/question5",
-        templateUrl: "./views/questions/question5/question5.html"
-    })
-    .state("question6",{
-        url: "/question6",
-        templateUrl: "./views/questions/question6/question6.html"
-    })
-    .state("question7",{
-        url: "/question7",
-        templateUrl: "./views/questions/question7/question7.html"
-    })
-    .state("question8",{
-        url: "/question8",
-        templateUrl: "./views/questions/question8/question8.html"
-    })
-    .state("question9",{
-        url: "/question9",
-        templateUrl: "./views/questions/question9/question9.html"
-    })
-    .state("question10",{
-        url: "/question10",
-        templateUrl: "./views/questions/question10/question10.html"
+    .state("question", {
+        url: "/question/:id",
+        templateUrl: "./views/questions/question/question.html",
+        controller: "questionCtrl"
     })
     .state("question11",{
         url: "/question11",
@@ -56,11 +21,13 @@ angular.module("quizApp", ["ui.router"])
     })
     .state("question13",{
         url: "/question13",
-        templateUrl: "./views/questions/question13/question13.html"
+        templateUrl: "./views/questions/question13/question13.html",
+        controller: "questionCtrl"
     })
-    .state("question14",{
-        url: "/question14",
-        templateUrl: "./views/questions/question14/question14.html"
+    .state("questionX",{
+        url: "/questionX",
+        templateUrl: "./views/questions/question14/questionX.html",
+        controller: "xCtrl"
     })
     .state("question15",{
         url: "/question15",
@@ -68,11 +35,13 @@ angular.module("quizApp", ["ui.router"])
     })
     .state("question16",{
         url: "/question16",
-        templateUrl: "./views/questions/question16/question16.html"
+        templateUrl: "./views/questions/question16/question16.html",
+        controller: "question16"
     })
     .state("question17",{
         url: "/question17",
-        templateUrl: "./views/questions/question17/question17.html"
+        templateUrl: "./views/questions/question17/question17.html",
+        controller:"questionCtrl"
     })
     .state("question18",{
         url: "/question18",
@@ -85,5 +54,17 @@ angular.module("quizApp", ["ui.router"])
     .state("question20",{
         url: "/question20",
         templateUrl: "./views/questions/question20/question20.html"
+    })
+    .state("congratz",{
+        url: "/congratz",
+        templateUrl: "./views/congratz/congratz.html"
+    })
+    .state("incorrect", {
+        url: "/incorrect",
+        templateUrl: "./views/incorrect/incorrect.html"
+    })
+    .state("directions", {
+        url: "/directions",
+        templateUrl: "./views/directions/directions.html"
     })
 })
