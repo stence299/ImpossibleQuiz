@@ -36,10 +36,15 @@ angular.module("quizApp").controller("questionCtrl", function($scope, $state, $s
         } 
         
         else if (answerChoice === $scope.question.correctAnswer) {
+            console.log(this)
+            jQuery(".true").css('background-color', '#31ff2f')
+            
+            // alert('Nice!')
             $timeout(function() {
                 $state.go("question", {id: parseInt($scope.question.nextQuestion)})
             }, 500)
         } else {
+            // jQuery("button").css('background-color' , 'red')
             $state.go("incorrect")
         }   
     }
@@ -67,5 +72,4 @@ angular.module("quizApp").controller("questionCtrl", function($scope, $state, $s
     $scope.goto17 = function(){
         $state.go("question", {id: 17});
     }
-
 })

@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
-const port = 3000;
-const connectionString = "postgres://markus@localhost/questions"
+const port = 3001;
+const connectionString = require('./config').dbConnection
 const questions_controller = require("./questions_controller")
 const app = express();
 

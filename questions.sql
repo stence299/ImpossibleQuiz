@@ -45,7 +45,9 @@ CREATE TABLE "Questions" (
     "answerChoice2" text NOT NULL,
     "answerChoice3" text NOT NULL,
     "answerChoice4" text NOT NULL,
-    "correctAnswer" text NOT NULL
+    "correctAnswer" text NOT NULL,
+    "nextQuestion" text,
+    picture text
 );
 
 
@@ -83,22 +85,22 @@ ALTER TABLE ONLY "Questions" ALTER COLUMN id SET DEFAULT nextval('"Questions_id_
 -- Data for Name: Questions; Type: TABLE DATA; Schema: public; Owner: markus
 --
 
-COPY "Questions" (id, question, "answerChoice1", "answerChoice2", "answerChoice3", "answerChoice4", "correctAnswer") FROM stdin;
-1	How do you start a (kind of) impossible quiz? 	Confidently	Carefully	Painfully	You Don't	Painfully
-2	What sound does an ambulance siren make?	Whoop-Whoop	Wee-Woo-Wee-Woo	Blip-Blop-Bloop-Bling-Blang	Qwop-Qwop-Qwop-Qwop-Qwop	Wee-Woo-Wee-Woo
-3	What do you call a wingless fly?	A Flap	An Orange	A Walk	Jason	A Walk
-4	How many holes are in a phone?	2	3	4	5	4
-5	Sdrawkcab noitseuq siht rewsna	What?	I don't understand..	Next question please	K.O	K.O
-6	What is the 7th letter in the alphabet?	G	H	I	E	H
-7	Look! Count Dracula!	Uhhh... One?	Yeah... That is him...	That's not him....	This doesnt make sense...	Uhhh... One?
-8	On the subject of Dracula, what is his favorite food?	Blood	Urine	Chicken Fried Chicken	Pumpkin Pie	Chicken Fried Chicken
-9	Remember these colors: Blue, Red, Orange, Purple	Okey Dokey	Why?	I can't...	This quiz is stupid...	Okey Dokey
-10	What color is this moose?	FFFF00	FFE507	E2000B	A5814B	FFFF00
-11	Can you get this question wrong?	No	Nope	No Way	Of Course Not	Of Course Not
-12	I hope you've been paying attention to the question numbers!!	Go to 13	Go to 14	Go to 15	Go to 16	Go to 15
-13	What was the 3rd color listed on number 7?	Purple	Red	Blue	Orange	Orange
-14	Did you enjoy the last question?	Nope	This is a waste of time...	I loved it!!	Elbow Orange	I loved it!!
-15	What is the 7th letter of the alphabet?	G	I	H	Wait a minute...	G
+COPY "Questions" (id, question, "answerChoice1", "answerChoice2", "answerChoice3", "answerChoice4", "correctAnswer", "nextQuestion", picture) FROM stdin;
+14	I hope you've been paying attention to the question numbers!!	Go to 13	Go to 14	Go to 15	Go to 16	Go to 15	15	\N
+6	What is the 7th letter in the alphabet?	G	H	I	E	H	7	\N
+17	Did you enjoy the last question?	Nope	This is a waste of time...	I loved it!!	Elbow Orange	I loved it!!	18	\N
+4	How many holes are in a phone?	2	3	4	5	4	5	\N
+19	What is the 7th letter of the alphabet?	G	I	H	Wait a minute...	G	20	\N
+2	What sound does an ambulance siren make?	Whoop-Whoop	Wee-Woo-Wee-Woo	Blip-Blop-Bloop-Bling-Blang	Qwop-Qwop-Qwop-Qwop-Qwop	Wee-Woo-Wee-Woo	3	\N
+9	Remember these colors: Blue, Red, Orange, Purple	Okey Dokey	Why?	I can't...	This quiz is stupid...	Okey Dokey	10	\N
+5	Sdrawkcab noitseuq siht rewsna	What?	I don't understand..	Next question please	K.O	K.O	6	\N
+3	What do you call a wingless fly?	A Flap	An Orange	A Walk	Jason	A Walk	4	\N
+18	What was the 3rd color listed on number 7?	Purple	Red	Blue	Orange	Orange	19	\N
+1	How do you start a (kind of) impossible quiz? 	Confidently	Carefully	Painfully	You Don't	Painfully	2	\N
+8	On the subject of Dracula, what is his favorite food?	Blood	Urine	Chicken Fried Chicken	Pumpkin Pie	Chicken Fried Chicken	9	\N
+11	Can you get this question wrong?	No	Nope	No Way	Of Course Not	Of Course Not	12	\N
+7	Look! Count Dracula!	Uhhh... One?	Yeah... That is him...	That's not him....	This doesnt make sense...	Uhhh... One?	8	https://images.vexels.com/media/users/3/130485/isolated/lists/00c50ed9c604281406a119990d4ddd7c-funny-dracula-character.png
+10	What color is this moose?	FFFF00	FFE507	E2000B	A5814B	FFFF00	11	http://www.clker.com/cliparts/N/H/U/c/W/y/yellow-moose-md.png
 \.
 
 

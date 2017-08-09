@@ -5,9 +5,9 @@
     <img class="pictures" ng-src="{{question.picture}}">
 </div>
 <div class="answer-box">
-    <button class="answer-box-1" ng-click="submit(question.answerChoice1)">{{question.answerChoice1}}</button>
-    <button class="answer-box-1" ng-click="submit(question.answerChoice2)">{{question.answerChoice2}}</button>
-    <button class="answer-box-1" ng-click="submit(question.answerChoice3)">{{question.answerChoice3}}</button>
-    <button class="answer-box-1" ng-click="submit(question.answerChoice4)">{{question.answerChoice4}}</button>
+    <button class="answer-box-1 {{question.answerChoice1 === question.correctAnswer}}" ng-click="submit(question.answerChoice1)">{{question.answerChoice1}}</button>
+    <button class="answer-box-1 {{question.answerChoice2 === question.correctAnswer}}" ng-click="submit(question.answerChoice2)">{{question.answerChoice2}}</button>
+    <button class="answer-box-1 {{question.answerChoice3 === question.correctAnswer}}" ng-click="submit(question.answerChoice3)">{{question.answerChoice3}}</button>
+    <button class="answer-box-1 {{question.answerChoice4 === question.correctAnswer}}" ng-click="submit(question.answerChoice4)">{{question.answerChoice4}}</button>
 </div>
 </div>   
